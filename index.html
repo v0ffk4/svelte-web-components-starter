@@ -7,11 +7,12 @@
 		<title>Svelte Web Components</title>
 	</head>
 	<body>
-		<example-counter greeting="Hello and welcome"
-			>This is slot content</example-counter
+		<example-parent greeting="Hello and welcome"
+			>This is slot content</example-parent
 		>
 
 		<script type="module" src="/src/main.ts"></script>
+
 		<!-- HMR Setup -->
 		<script src="//unpkg.com/redefine-custom-elements@0.1.2/lib/index.js"></script>
 		<script>

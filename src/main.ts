@@ -1,1 +1,1 @@
-export * from './lib/example-counter.svelte'
+export * from "./lib/example-parent.svelte";
