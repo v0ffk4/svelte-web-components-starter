@@ -1,7 +1,19 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { defineConfig } from "vite";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
 
-// https://vitejs.dev/config/
+const webComponents = ["src/lib/example-counter.svelte"];
+
 export default defineConfig({
-  plugins: [svelte()],
-})
+	plugins: [
+		svelte({
+			include: ["src/**/*.svelte"],
+			exclude: webComponents,
+		}),
+		svelte({
+			include: webComponents,
+			compilerOptions: {
+				customElement: true,
+			},
+		}),
+	],
+});
